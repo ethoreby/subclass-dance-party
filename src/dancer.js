@@ -1,4 +1,10 @@
 var Dancer = function(top, left, timeBetweenSteps){
+  if(top > $(window).height() - 100) {
+    top -= 100;
+  }
+  if(left > $(window).width() - 100) {
+    left -= 100;
+  }
 
   this.$node = $('<span class="dancer"></span>');
   this._timeBetweenSteps = timeBetweenSteps;
@@ -22,8 +28,12 @@ Dancer.prototype.step = function(){
 };
 
 Dancer.prototype.lineUp = function(){
-  var maxHeight = $(window).height() - 100;
+  var middle = $(window).height() / 2 - (this.$node.height()/2);
   var left = this.$node.offset().left;
-  this.setPosition(maxHeight, left);
+  this.setPosition(middle, left);
 };
-
+/*
+Dancer.prototype.remove = function(){
+  this.$node.remove();
+};
+*/
