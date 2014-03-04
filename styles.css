@@ -47,10 +47,10 @@ body, a:link, a:visited, a:active{
 }
 
 .marcus{
-  background-image: url('http://hrhq.squarespace.com/assets/images/heroes/marcusphillips.jpg');
+  background-image: url('marcus.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 90px;
   position:absolute;
 }
