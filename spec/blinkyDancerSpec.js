@@ -24,7 +24,7 @@ describe("blinkyDancer", function() {
       sinon.spy(blinkyDancer, "step");
       expect(blinkyDancer.step.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps);
-      clock.tick(timeBetweenSteps); // Why do we have a 2nd call?
+      //clock.tick(timeBetweenSteps); // Why do we have a 2nd call?
 
       expect(blinkyDancer.step.callCount).to.be.equal(1);
 
