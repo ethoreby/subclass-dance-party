@@ -21,3 +21,9 @@ Dancer.prototype.step = function(){
   }, this._timeBetweenSteps);
 };
 
+Dancer.prototype.lineUp = function(){
+  var maxHeight = $(window).height() - 100;
+  var left = this.$node.offset().left;
+  this.setPosition(maxHeight, left);
+};
+

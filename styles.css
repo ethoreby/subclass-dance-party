@@ -5,17 +5,20 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("http://images5.alphacoders.com/330/330201.jpg");
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpButton {
   padding:5px 12px;
   float:right;
+  background-color: #555;
 }
 .topbar{
   height:32px;
-  background-color: #555;
 }
 .title{
   background-color: #777;
@@ -23,5 +26,31 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid red;
   border-radius:10px;
+  position:absolute;
+}
+.pointy{
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid green;
+  position:absolute;
+}
+
+.inverse-pointy{
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid green;
+  position:absolute;
+}
+
+.marcus{
+  background-image: url('http://hrhq.squarespace.com/assets/images/heroes/marcusphillips.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
   position:absolute;
 }
