@@ -37,5 +37,18 @@ $(document).ready(function(){
       dancer.lineUp();
     });
   });
+
+  $(".explodeButton").on("click", function(event){
+    $("body").css({"background-image": "url('explosions.gif')"});
+    setTimeout(function() {
+      $("body").css({"background-image": "url('background.jpg')"});
+    }, 3100);
+    window.dancers.forEach(function(dancer){
+      dancer.$node.remove();
+    });
+    window.dancers = [];
+  });
+
+
 });
 

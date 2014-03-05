@@ -3,25 +3,47 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
-  background-image: url("http://images5.alphacoders.com/330/330201.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
 }
-body, a:link, a:visited, a:active{
-  color: lightblue;
 
+.title{
+  float: left;
+  color: orange;
+  font-size: 32px;
+  margin: 5px;
+  margin-left: 15px;
+  font-family: futura;
 }
-.title, .addDancerButton, .lineUpButton {
+
+.addDancerButton, .lineUpButton, .dancer-label, .explodeButton {
   padding:5px 12px;
   float:right;
-  background-color: #555;
+  background-color: black;
+  text-decoration: none;
 }
+
+.dancer-label {
+  font-family: monospace;
+  color: orange;
+  margin: 5px;
+}
+
+.addDancerButton, .lineUpButton, .explodeButton {
+  border: 2px solid dodgerblue;
+  font-family: monospace;
+  color: dodgerblue;
+  margin: 5px;
+}
+
+.addDancerButton:hover, .lineUpButton:hover, .explodeButton:hover {
+  border: 2px solid white;
+  color: white;
+}
+
 .topbar{
   height:32px;
-}
-.title{
-  background-color: #777;
 }
 .dancer{
   border:10px solid red;
@@ -64,12 +86,17 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.angler-flip {
-
+.angler-flip, .marcus-flip {
   -moz-transform:scaleX(-1);
   -o-transform:scaleX(-1);
   -webkit-transform:scaleX(-1);
   transform:scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+.explosion {
+  background-image: url('explosions.gif');
+  width: 80%;
+  position: absolute;
 }

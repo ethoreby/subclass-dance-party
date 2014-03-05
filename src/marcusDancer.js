@@ -15,6 +15,11 @@ MarcusDancer.prototype.step = function(){
   var y = this.$node.offset().top; // + this.v_velocity;
   var maxWidth = $(window).width();
   var maxHeight = $(window).height();
+  if(this.$node.hasClass("marcus-flip")) {
+    this.$node.removeClass("marcus-flip");
+  }else {
+    this.$node.addClass("marcus-flip");
+  }
   if (x <= 30 || x >= maxWidth - 110) {
     this.h_velocity *= -1;
   }
