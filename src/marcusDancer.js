@@ -3,8 +3,8 @@ var MarcusDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.removeClass("dancer");
   this.$node.addClass("marcus");
-  this.v_velocity = 30;
-  this.h_velocity = 30;
+  this.v_velocity = 15 + Math.floor(Math.random() * 15 + 1);
+  this.h_velocity = 15 + Math.floor(Math.random() * 15 + 1);
 };
 
 MarcusDancer.prototype = Object.create(Dancer.prototype);
